@@ -1,0 +1,50 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script type="application/adaptivecard+json">
+        {
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "hideOriginalBody": true,
+        "originator":"15c77b05-a53c-4c8e-b382-12bc3c06c227",
+        "body": [
+        {
+        "type": "TextBlock",
+        "text":"Additinal Feeback Required",
+        "size": "Medium"
+        },
+        {
+        "type": "TextBlock",
+        "text": "Comments!"
+        },
+        {
+        "type": "Input.Text",
+        "id": "Comment",
+        "placeholder": ""
+        }
+        ],
+        "actions": [
+        {
+        "type": "Action.Http",
+        "title": "Submit",
+        "method": "POST",
+        "url": "https://39ad5e5d85b4.ngrok.io/api/commands",
+        "body":"{\"Comment\":\"{{Comment.value}}\"}"
+        },
+        {
+        "type": "Action.OpenUrl",
+        "title": "Contact",
+        "url": "https://docs.microsoft.com/outlook/actionable-messages"
+        }
+        ]
+        }
+    </script>
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
